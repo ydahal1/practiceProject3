@@ -12,11 +12,12 @@ const Modal = props => {
       <Container fluid>
         <Row>
          
-            <Col size="md-4"></Col>
+            <Col size="md-5"></Col>
 
-            <Col size="md-4">
-              <img class="img" src={props.avatarUrl} alt="imge" />
-              <h3 className="h1">{props.name},&nbsp;{props.Gender}&nbsp;,{props.Age}&nbsp;yrs</h3>
+            <Col size="md-3">
+              <img className="imgnew" src={props.avatarUrl} alt="imge" />
+              <h3 className="h121">{props.name},&nbsp;{props.Gender}&nbsp;</h3>
+              <h3 className="h121">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{props.Age}&nbsp;yrs</h3>
             </Col>
             <Col size="md-4"></Col>
       
@@ -44,7 +45,7 @@ const Modal = props => {
         <Row>
           <Col size="md-4"></Col>
           <Col size="md-3">
-          <h4><img src="https://png.icons8.com/color/40/000000/marker.png"/>{props.location}</h4>
+          <h4><img className="eimg" src="https://png.icons8.com/color/40/000000/marker.png" alt="location" />{props.location}</h4>
           </Col>
           <Col size="md-5">
           </Col>
@@ -53,7 +54,7 @@ const Modal = props => {
         <Row>
           <Col size="md-4"></Col>
           <Col size="md-3">
-           <img src="https://png.icons8.com/ios/48/000000/contacts-filled.png"/>{props.contact_number}
+           <img className="eimg" src="https://png.icons8.com/ios/48/000000/contacts-filled.png" alt="contact"/>{props.contact_number}
           </Col>
           <Col size="md-5">
           </Col>
@@ -63,7 +64,7 @@ const Modal = props => {
           <Row>
           <Col size="md-4"></Col>
           <Col size="md-4">
-          <img className="eimg" src="https://png.icons8.com/dusk/80/000000/gmail.png"/>&nbsp;{props.email}
+          <img className="eimg" src="https://png.icons8.com/dusk/80/000000/gmail.png" alt="gmail"/>&nbsp;{props.email}
           </Col>
           <Col size="md-4">
           </Col>

@@ -8,10 +8,10 @@ class Dashboards extends Component {
 
   render() {
     return (
-      <Container fluid>
-        <Row>
+      <Container fluid  >
+        <Row >
           <Col size="md-12">
-            <Jumbotron>
+            <Jumbotron >
               <h1>Hey Jane</h1>
               <h3>What would you like to do today?</h3>
             </Jumbotron>
