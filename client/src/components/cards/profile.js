@@ -6,18 +6,18 @@ import "./name.css";
 const Usernames = props => (
   <div>
   
-      <div className="main">
-      <div className="container">
+      <div className="mainname">  {/* main1 */}
+      <div className="containername"> {/* container1 */}
         
-            <img src={props.img} alt="Avatar" className="image" />
+            <img src={props.img} alt="Avatar" className="image1name" />   {/* image1 */}
             <h5>{props.usernames} , {props.Gender} , {props.age} , {props.City} </h5>
             <h6>{props.percentage}%</h6>
             <h6>{props.About_me}</h6>
 
-            <div className="overlay">
-              <button className="btn"><i className="fa fa-save">&nbsp;Save</i></button>
-              <button id={props.id} className="btn1" onClick={props.hiddenid}><i className="fa fa-trash">&nbsp;Remove</i></button>
-              <button className="btn2" onClick={props.show}><i className="fa fa-ellipsis-h">&nbsp;View More</i></button>
+            <div className="overlay1name">
+              <button className="btn1name"><i className="fa fa-save">&nbsp;Save</i></button>
+              <button id={props.id} className="btn11name" onClick={props.hiddenid}><i className="fa fa-trash">&nbsp;Remove</i></button>
+              <button className="btn21name" onClick={props.show}><i className="fa fa-ellipsis-h">&nbsp;View More</i></button>
             </div>
           </div>
           

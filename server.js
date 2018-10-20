@@ -23,13 +23,10 @@ app.use(bodyParser.json());
 const PORT = process.env.PORT || 3050;
 
 //Database configuration
-const db = require("./config/keys").mongoURI;
+// const db = require("./config/keys").mongoURI;
 
 //Connection to mongo DB
-mongoose
-  .connect(db)
-  .then(() => console.log("Connected to mongo db"))
-  .catch(err => console.log(err));
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/users2",{ useNewUrlParser: true });
 
 //passport middle ware - initialize
 app.use(passport.initialize());

@@ -202,6 +202,9 @@ body {
   .imgonbox{
       height: 70px;
   }
+  .container1{
+      width: 100%;
+  }
 
   .three:hover {
     letter-spacing: 8px;
