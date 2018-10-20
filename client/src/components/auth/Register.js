@@ -59,10 +59,6 @@ class Register extends Component {
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
-
-  onCheck = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
   //Check hide intro
   hideIntro = e => {
     this.setState({ hideintro: true });
@@ -80,25 +76,8 @@ class Register extends Component {
       password2: this.state.password2,
       // avatar: this.state.avatar
       avatar:
-        "https://banner2.kisspng.com/20180410/bbw/kisspng-avatar-user-medicine-surgery-patient-avatar-5acc9f7a7cb983.0104600115233596105109.jpg",
-      aboutMe: [
-        this.state.myage,
-        this.state.mygender,
-        this.state.mylocation,
-        this.state.iamsportLover
-        // this.state.iampetLover
-        // this.state.iamsnorer,
-        // this.state.iamcleanFreak,
-        // this.state.iamcomputerNeard,
-        // this.state.iamheavyDrinker,
-        // this.state.iampartyLover,
-        // this.state.iampartyLover,
-        // this.state.iamsmoker,
-        // this.state.iamborrower
-      ],
-      interestedIn: "cow"
+        "https://banner2.kisspng.com/20180410/bbw/kisspng-avatar-user-medicine-surgery-patient-avatar-5acc9f7a7cb983.0104600115233596105109.jpg"
     };
-
     console.log(newUser);
     this.props.registeruser(newUser, this.props.history);
   };
@@ -117,7 +96,10 @@ class Register extends Component {
 
                 <div className="my-intro-p row text-center justify-content-center">
                   <p className="form-inline justify-content-center">
-                    I am &nbsp;
+                    {this.hideintro
+                      ? console.log("apple")
+                      : console.log("mango")}
+                    {console.log(this.check)};
                     <input
                       className="form-control form-control-sm col-sm-1 "
                       name="myage"
@@ -147,8 +129,7 @@ class Register extends Component {
                       <input
                         type="checkbox"
                         name="iamsportLover"
-                        value="sport lover"
-                        onChange={this.onCheck}
+                        onChange={this.onChange}
                       />
                       &nbsp;
                       <label className="form-check-label">Sport Lovers</label>
@@ -160,8 +141,7 @@ class Register extends Component {
                       <input
                         type="checkbox"
                         name="iampetLover"
-                        value="pet lover"
-                        onChange={this.onCheck}
+                        onChange={this.onChange}
                       />
                       &nbsp;
                       <label className="form-check-label">Pet Lovers</label>
@@ -173,8 +153,7 @@ class Register extends Component {
                       <input
                         type="checkbox"
                         name="iamsnorer"
-                        value="snorer"
-                        onChange={this.onCheck}
+                        onChange={this.onChange}
                       />
                       &nbsp;
                       <label className="form-check-label">Snorers</label>
@@ -186,8 +165,7 @@ class Register extends Component {
                       <input
                         type="checkbox"
                         name="iamcleanFreak"
-                        value="clean"
-                        onChange={this.onCheck}
+                        onChange={this.onChange}
                       />
                       &nbsp;
                       <label className="form-check-label">Clean freaks</label>
@@ -199,8 +177,7 @@ class Register extends Component {
                       <input
                         type="checkbox"
                         name="iamcomputerNeard"
-                        value="computer neard"
-                        onChange={this.onCheck}
+                        onChange={this.onChange}
                       />
                       &nbsp;
                       <label className="form-check-label">Computer nerds</label>
@@ -212,8 +189,7 @@ class Register extends Component {
                       <input
                         type="checkbox"
                         name="iamheavyDrinker"
-                        value="drinker"
-                        onChange={this.onCheck}
+                        onChange={this.onChange}
                       />
                       &nbsp;
                       <label className="form-check-label">Heavy drinkers</label>
@@ -225,8 +201,7 @@ class Register extends Component {
                       <input
                         type="checkbox"
                         name="iampartyLover"
-                        value="party lover"
-                        onChange={this.onCheck}
+                        onChange={this.onChange}
                       />
                       &nbsp;
                       <label className="form-check-label">Party goers</label>
@@ -238,8 +213,7 @@ class Register extends Component {
                       <input
                         type="checkbox"
                         name="iamsmoker"
-                        value="smoker"
-                        onChange={this.onCheck}
+                        onChange={this.onChange}
                       />
                       &nbsp;
                       <label className="form-check-label">Smokers</label>
@@ -251,8 +225,7 @@ class Register extends Component {
                       <input
                         type="checkbox"
                         name="iamborrower"
-                        value="borrower"
-                        onChange={this.onCheck}
+                        onChange={this.onChange}
                       />
                       &nbsp;
                       <label className="form-check-label">Borrowers</label>

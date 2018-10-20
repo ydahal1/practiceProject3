@@ -11,9 +11,8 @@ module.exports = function validateRegisterInput(data) {
   data.email = !isEmpty(data.email) ? data.email : "";
   data.password = !isEmpty(data.password) ? data.password : "";
   data.password2 = !isEmpty(data.password2) ? data.password2 : "";
+
   data.avatar = !isEmpty(data.avatar) ? data.avatar : "";
-  data.aboutMe = !isEmpty(data.aboutMe) ? data.aboutMe : "";
-  data.interestedIn = !isEmpty(data.interestedIn) ? data.interestedIn : "";
 
   //Make sure name is atlease 2 chars and no longer then 50
   if (!Validator.isByteLength(data.name, { min: 2, max: 50 })) {
@@ -32,7 +31,7 @@ module.exports = function validateRegisterInput(data) {
     errors.email = "Not a valid email";
   }
 
-  //Password cannot not empty
+  //Password is not empty
   if (Validator.isEmpty(data.password)) {
     errors.password = "Password field cannot be empty";
   }

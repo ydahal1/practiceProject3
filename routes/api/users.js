@@ -48,8 +48,6 @@ router.post("/register", (req, res) => {
           name: req.body.name,
           email: req.body.email,
           avatar: req.body.avatar,
-          aboutMe: req.body.aboutMe,
-          interestedIn: req.body.interestedIn,
           password: req.body.password,
           password2: req.body.password2
         });
@@ -114,9 +112,7 @@ router.post("/login", (req, res) => {
           const payload = {
             id: user.id,
             name: user.name,
-            avatar: user.avatar,
-            aboutMe: user.aboutMe,
-            interestedIn: user.interestedIn
+            avatar: user.avatar
           };
           // 1. Sign a token ( not suere why secret or key is there, this is retrived from config/keys.js)
           //ExpiresIn willl kick out user - 3600 s will kick out in an hour
