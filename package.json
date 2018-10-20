@@ -8,7 +8,8 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "seed": "node scripts/seedDB.js"
   },
   "author": "Yadhap, Parth, Yash, Andrew, Mark",
   "license": "ISC",
@@ -23,6 +24,11 @@
     "validator": "^10.8.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "axios": "^0.16.2",
+    "express": "^4.16.3",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.0.17",
+    "nodemailer": "^4.6.8"
   }
 }
