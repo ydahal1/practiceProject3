@@ -1,22 +1,20 @@
 import React, { Component } from "react";
 import { Provider } from "react-redux";
 import store from "./store";
+
+import PrivateRoute from "./components/common/privateRoutes";
+
 //used so browser back and front button works
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { setCurrentUser } from "./actions/authActions";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 
 import Navbar from "./components/layout/Navbar";
 import Landing from "./components/layout/Landing";
+import Dashboard from "./components/layout/Dashboard";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
-
-import Dashboard from "./pages/Dashboard";
-import Profile from "./pages/Profile";
-import Saved from "./pages/Saved";
-import Matches from "./pages/Matches";
-import Email from "./pages/Email";
 
 import "./App.css";
 
@@ -37,18 +35,15 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <div>
+          <div className="App">
             <Navbar />
             <Route exact path="/" component={Landing} />
             <div className="container">
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
-
-              <Route exact path="/Email" component={Email} />
-              <Route exact path="/dashboard" component={Dashboard} />
-              <Route exact path="/matches" component={Matches} />
-              <Route exact path="/saved" component={Saved} />
-              <Route exact path="/profile" component={Profile} />
+              <Switch>
+                <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              </Switch>
             </div>
           </div>
         </Router>

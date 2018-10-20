@@ -7,13 +7,11 @@ const users = require("./routes/api/users");
 const profile = require("./routes/api/profile");
 const posts = require("./routes/api/posts");
 
-const routes = require("./routes");
-
 //initilizing express
 const app = express();
 
 //Serving static files
-// app.use(express.static("src"));
+app.use(express.static("src"));
 
 //Body parser middle ware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -41,8 +39,6 @@ require("./config/passport")(passport);
 app.use("/api/users/", users);
 app.use("/api/profile", profile);
 app.use("/api/posts", posts);
-// Add routes, both API and view
-app.use(routes);
 
 //Test:
 app.get("/", (req, res) => res.send("Hello !! welcome"));
