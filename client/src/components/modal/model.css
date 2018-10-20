@@ -27,17 +27,18 @@
   .display-none {
     display: none;
   }
-    .img {
+    .imgnew {
       border-radius: 40%;
-      height: 150px;
-      width: 150px;
+      /* height: 150px; */
+      width:60%;
       margin-top: 10px;
-      margin-left: 35px;
+    
   }
-  .h1{
+  .h121{
     color:black;
     font-size: 25px;
-    text-align: center;
+    text-align: left;
+    
   }
   .h3{
     color: black;
@@ -53,6 +54,7 @@
   margin-left: 35px;
 }
 .eimg{
-  height: 40px;
+  height: 40%;
+  width: 20%;
   margin-top:20px;
 }

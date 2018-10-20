@@ -1,10 +1,10 @@
-.main{
+.mainname{
   margin-left: 60px;
 }
-.container {
+.containername {
     position: relative;
     padding: 0;
-    height:auto;   /*change this hieght to 250px   */
+    height:auto;   
     float: left;
     width: 18%;
     background-color: white;
@@ -16,11 +16,11 @@
     box-shadow: gray 2px 2px 2px 2px;
     border-radius: 10px;
 }
-.hidden{
+.hiddenname{
   display: none;
 }
   
-  .image {
+  .image1name {
     position: relative;
     display: block;
     width: 100%;
@@ -32,7 +32,7 @@
 
   }
   
-  .overlay {
+  .overlay1name {
     position: absolute;
     border-radius: 10px;
     bottom: 0;
@@ -51,13 +51,13 @@
     transition: .3s ease;
   }
   
-  .container:hover .overlay {
+  .containername:hover .overlay1name {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
   }
   
-  .text {
+  .text1name {
     color: white;
     font-size: 20px;
     position: absolute;
@@ -68,7 +68,7 @@
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  .btn {
+  .btn1name {
      background-color: white; 
     border: 2px solid white;
     color:rgb(68, 57, 57);
@@ -82,7 +82,7 @@
     right: 0px;
     left: 27px;
 }
-.btn1 {
+.btn11name {
     background-color: white;
     border: 2px solid white;
     color:rgb(68, 57, 57);
@@ -96,7 +96,7 @@
     right: 0px;
     left: 27px;
 }
-.btn2 {
+.btn21name {
     background-color: white;
     border: 2px solid white;
     color:rgb(68, 57, 57);
@@ -112,12 +112,12 @@
     right: 0px;
     left: 27px;
 }
-.btn :hover{
+.btn1name :hover{
   color:black;
 }
-.btn1 :hover{
+.btn11name :hover{
   color:black;
 }
-.btn2 :hover{
+.btn21name :hover{
   color:black;
 }
